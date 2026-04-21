@@ -12,3 +12,27 @@ for entry in history:
         visits[entry] = 0
     visits[entry] += 1
     print(visits)
+
+log_lines = [
+    "INFO: User logged in",
+    "ERROR: Failed to load resource",
+    "WARNING: Low disk space",
+    "CRITICAL: System crash detected",
+    "ERROR: Database connection lost"
+]
+
+for line in log_lines:
+    if "CRITICAL" in line:
+        print("Shutting down server")
+        break
+
+
+sites = [
+    {"name": "Google", "status": "active"},
+    {"name": "Facebook", "status": "inactive"},
+    {"name": "Twitter", "status": "active"},
+]
+
+for site in sites:
+    if site["status"] == "inactive":
+        print(f"{site['name']} is currently inactive.")
