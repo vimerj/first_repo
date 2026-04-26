@@ -16,8 +16,8 @@ def get_upcoming_birthdays(users):
         if 0 <= delta_days <= 7:
             congratulation_date = birthday_this_year
 
-            # Якщо вихідний — переносимо на понеділок
-            if congratulation_date.weekday() == 5:  # субота
+
+            if congratulation_date.weekday() == 5: # субота
                 congratulation_date += timedelta(days=2)
             elif congratulation_date.weekday() == 6:  # неділя
                 congratulation_date += timedelta(days=1)
