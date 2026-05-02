@@ -4,7 +4,7 @@ import re
 def total_salary(path):
     total = 0
     list_avg = []
-    path = "salary.txt"
+    path = "hw04_salary.txt"
     
     with open(path, "r") as file:
         while True:
